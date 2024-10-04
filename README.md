@@ -17,18 +17,18 @@ Five classification models were trained and evaluated:
 <br>
 <ul>
   <li>Logistic Regression Model: Achieved moderate training and test scores with a moderate root mean squared error (RMSE). It demonstrates moderate performance in capturing linear relationships between features and the target variable.</li>
-  
+  <br>
   <li>Ridge Classifier Model: Performed decently with a slightly higher test score compared to logistic regression. It provides a regularization technique to mitigate multicollinearity and overfitting, resulting in robust model performance.</li>
-
+<br>
   <li>Decision Tree Classifier Model: Demonstrated strong training and test scores, indicating its ability to capture complex relationships in the data. However, it has a slightly higher RMSE compared to other models, suggesting some variability in predictions.</li>
-
+<br>
   <li>XGBoost Classifier Model: Exhibited high training and test scores with a relatively low RMSE, indicating its robustness and effectiveness in handling complex datasets. It utilizes an ensemble of decision trees to improve predictive accuracy.</li>
-
+<br>
   <li>LightGBM Classifier Model: Outperformed other models with the highest test score and lowest RMSE. It leverages gradient boosting and histogram-based algorithms to efficiently handle large datasets and capture intricate patterns in the data.</li>
 </ul>
 
 <br>
-<br>
+
 <b>Recommendation for the Final Model:</b>
 Based on the results, the LightGBM Classifier model appears to be the most suitable final model. It achieved the lowest root mean squared error (RMSE) and a relatively higher test score compared to the other models. Thus, the LightGBM Classifier model captures complex patterns in the data more successfully, enhancing its predictive performance.
 <br>
