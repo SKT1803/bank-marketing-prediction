@@ -15,19 +15,18 @@ The main objective of this analysis is to develop classification models to predi
 Five classification models were trained and evaluated:
 <br>
 <br>
-* Logistic Regression Model: Achieved moderate training and test scores with a moderate root mean squared error (RMSE). It demonstrates moderate performance in capturing linear relationships between features and the target variable.
-<br>
-<br>
-* Ridge Classifier Model: Performed decently with a slightly higher test score compared to logistic regression. It provides a regularization technique to mitigate multicollinearity and overfitting, resulting in robust model performance.
-<br>
-<br>
-* Decision Tree Classifier Model: Demonstrated strong training and test scores, indicating its ability to capture complex relationships in the data. However, it has a slightly higher RMSE compared to other models, suggesting some variability in predictions.
-<br>
-<br>
-* XGBoost Classifier Model: Exhibited high training and test scores with a relatively low RMSE, indicating its robustness and effectiveness in handling complex datasets. It utilizes an ensemble of decision trees to improve predictive accuracy.
-<br>
-<br>
-* LightGBM Classifier Model: Outperformed other models with the highest test score and lowest RMSE. It leverages gradient boosting and histogram-based algorithms to efficiently handle large datasets and capture intricate patterns in the data.
+<ul>
+  <li>Logistic Regression Model: Achieved moderate training and test scores with a moderate root mean squared error (RMSE). It demonstrates moderate performance in capturing linear relationships between features and the target variable.</li>
+  
+  <li>Ridge Classifier Model: Performed decently with a slightly higher test score compared to logistic regression. It provides a regularization technique to mitigate multicollinearity and overfitting, resulting in robust model performance.</li>
+
+  <li>Decision Tree Classifier Model: Demonstrated strong training and test scores, indicating its ability to capture complex relationships in the data. However, it has a slightly higher RMSE compared to other models, suggesting some variability in predictions.</li>
+
+  <li>XGBoost Classifier Model: Exhibited high training and test scores with a relatively low RMSE, indicating its robustness and effectiveness in handling complex datasets. It utilizes an ensemble of decision trees to improve predictive accuracy.</li>
+
+  <li>LightGBM Classifier Model: Outperformed other models with the highest test score and lowest RMSE. It leverages gradient boosting and histogram-based algorithms to efficiently handle large datasets and capture intricate patterns in the data.</li>
+</ul>
+
 <br>
 <br>
 <b>Recommendation for the Final Model:</b>
