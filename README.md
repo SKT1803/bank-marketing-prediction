@@ -1,37 +1,77 @@
-<h2>About the Data</h2>
-The data is related with direct marketing campaigns of a Portuguese banking institution. The marketing campaigns were based on phone calls. Often, more than one contact to the same client was required, in order to access if the product (bank term deposit) would be ('yes') or not ('no') subscribed.
-<br>
-<br>
-<h2>Exploratory Data Analysis and Preprocessing</h2>
-During data exploration and preprocessing steps, I examined the distribution of some important features, checked for missing and duplicate values, and looked for potential outliers. Data cleaning involved handling missing values, removing outliers if necessary, removing excesive skewness, scaling the numerical features and encoding categorical variables if applicable. Feature engineering in the later step of training included creating a new feature.
-<br>
-<br>
-<h2>Objectives</h2>
-The main objective of this analysis is to develop classification models to predict the target variable accurately while maintaining interpretability. The focus is primarily on prediction, but it's essential to understand the relationships between the predictors and the target variable for interpretability purposes.
-<br>
-<br>
-<h2>Summary of the Classification Models:</h2>
+# Supervised Machine Learning Classification – Bank Term Deposit Prediction
 
-Five classification models were trained and evaluated:
-<br>
-<br>
-<ul>
-  <li>Logistic Regression Model: Achieved moderate training and test scores with a moderate root mean squared error (RMSE). It demonstrates moderate performance in capturing linear relationships between features and the target variable.</li>
-  <br>
-  <li>Ridge Classifier Model: Performed decently with a slightly higher test score compared to logistic regression. It provides a regularization technique to mitigate multicollinearity and overfitting, resulting in robust model performance.</li>
-<br>
-  <li>Decision Tree Classifier Model: Demonstrated strong training and test scores, indicating its ability to capture complex relationships in the data. However, it has a slightly higher RMSE compared to other models, suggesting some variability in predictions.</li>
-<br>
-  <li>XGBoost Classifier Model: Exhibited high training and test scores with a relatively low RMSE, indicating its robustness and effectiveness in handling complex datasets. It utilizes an ensemble of decision trees to improve predictive accuracy.</li>
-<br>
-  <li>LightGBM Classifier Model: Outperformed other models with the highest test score and lowest RMSE. It leverages gradient boosting and histogram-based algorithms to efficiently handle large datasets and capture intricate patterns in the data.</li>
-</ul>
+This project focuses on classifying whether a client will subscribe to a **term deposit** based on historical marketing data from a Portuguese bank. The dataset contains both **categorical and numerical features**, derived from phone-based marketing campaigns.
 
-<br>
+---
 
-<b>Recommendation for the Final Model:</b>
-Based on the results, the LightGBM Classifier model appears to be the most suitable final model. It achieved the lowest root mean squared error (RMSE) and a relatively higher test score compared to the other models. Thus, the LightGBM Classifier model captures complex patterns in the data more successfully, enhancing its predictive performance.
-<br>
-<br>
-<h2>Insights and key findings</h2>
-Among the evaluated classification models, LightGBM emerged as the top performer, exhibiting the highest test score and lowest RMSE. Decision tree classifiers also showed promise in capturing complex relationships, while ridge regularization enhanced stability in logistic regression. Overall, LightGBM's superior performance and efficiency make it the recommended choice for deployment.
+## Dataset Overview
+
+- **Source**: [UCI Machine Learning Repository – Bank Marketing Dataset](https://archive.ics.uci.edu/ml/datasets/bank+marketing)
+- **Filename**: `bank-additional-full.csv`
+- **Target Variable**: `y` (binary: `'yes'` or `'no'`)
+- **Type**: Classification (Binary)
+
+---
+
+## Technologies Used
+
+- **Python**
+- **Pandas, NumPy** – Data manipulation
+- **Matplotlib, Seaborn** – Visualizations
+- **Scikit-learn** – Baseline models, evaluation
+- **XGBoost**, **LightGBM** – Advanced classifiers
+
+  
+ --- 
+
+## Objectives
+
+- Develop multiple **classification models** to accurately predict term deposit subscription.
+- Evaluate performance using accuracy, RMSE, and interpretability.
+- Compare model performance to determine the best algorithm for deployment.
+
+---
+
+## Exploratory Data Analysis (EDA) & Preprocessing
+
+- Checked for **missing values**, **duplicates**, and **outliers**
+- Addressed **skewed distributions** and **scaled numerical features**
+- **Encoded categorical variables**
+- Engineered a **new feature** to enhance model learning
+
+---
+
+## Models Trained
+
+| Model                    | Performance Summary                                                                 |
+|--------------------------|--------------------------------------------------------------------------------------|
+| Logistic Regression      | Moderate scores; simple and interpretable, captures basic linear relationships      |
+| Ridge Classifier         | Improved generalization; mitigates multicollinearity through L2 regularization      |
+| Decision Tree            | Strong performance; good at modeling complex relationships but prone to overfitting |
+| XGBoost Classifier       | High accuracy and low RMSE; robust ensemble method                                  |
+| LightGBM Classifier      | ⭐ **Best model**; high performance and efficient on large data                      |
+
+---
+
+## Final Model Recommendation
+
+** LightGBM Classifier**
+
+- Achieved the **highest test score** and **lowest RMSE**
+- Effectively handles:
+  - Categorical data
+  - Class imbalance
+  - Complex feature interactions
+- Highly efficient and scalable
+
+---
+
+## Key Insights
+
+- **LightGBM** outperforms other classifiers with excellent generalization.
+- **XGBoost** and **Decision Trees** are solid alternatives with good accuracy.
+- **Ridge Classifier** enhances logistic regression’s stability without overfitting.
+- Feature scaling and encoding played a key role in improving model reliability.
+
+
+
